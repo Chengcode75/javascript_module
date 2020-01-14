@@ -4,16 +4,21 @@ namespace Drupal\fruit\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 
+/**
+ * Class FruitController.
+ */
 Class FruitController extends ControllerBase{
+ /**
+   * {@inheritdoc}
+   */
+  public function content() {
+     $attachment['content'] = array(
+	'#type' => 'markup',
+	 '#markup' => '<div class="btn">'.$this->t('Info'),
+     );
 
-		public function content() {
-			$attachment['content'] = array(
-					'#type' => 'markup',
-					'#markup' => '<div class="btn">'.$this->t('Info'),
-			);
+	$attachment['#attached']['library'][] = 'fruit/global-script';
 
-			$attachment['#attached']['library'][] = 'fruit/global-script';
-
-			return $attachment;
-		}
+	return $attachment;
+	 }
 	}
