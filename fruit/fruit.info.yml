@@ -1,0 +1,4 @@
+name: Fruit js module
+description: A simple module which outputs price of fruits
+type: module
+core: 8.x

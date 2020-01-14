@@ -1,0 +1,7 @@
+fruit.content:
+  path: '/fruits'
+  defaults:
+    _title: 'Fruit Shop built with Javascript'
+    _controller: '\Drupal\fruit\Controller\FruitController::content'
+  requirements:
+    _permission: 'access content'
