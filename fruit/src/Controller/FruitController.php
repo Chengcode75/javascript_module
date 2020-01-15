@@ -7,18 +7,18 @@ use Drupal\Core\Controller\ControllerBase;
 /**
  * Class FruitController.
  */
-Class FruitController extends ControllerBase{
- /**
+class FruitController extends ControllerBase {
+
+  /**
    * {@inheritdoc}
    */
   public function content() {
-     $attachment['content'] = array(
-	'#type' => 'markup',
-	 '#markup' => '<div class="btn">'.$this->t('Info'),
-     );
+    $attachment['content'] = [
+      '#type' => 'markup',
+      '#markup' => '<div class="btn">' . $this->t('Info'),
+    ];
+    $attachment['#attached']['library'][] = 'fruit/global-script';
+    return $attachment;
+  }
 
-	$attachment['#attached']['library'][] = 'fruit/global-script';
-
-	return $attachment;
-	 }
-	}
+}
